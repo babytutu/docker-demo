@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "docker-demo",
   "scripts": {
-    "start": "sh clean.sh && docker build -t docker-demo . && docker run -dp 9002:8080 --name docker-demo docker-demo",
-    "save": "sh clean.sh && docker build -t docker-demo . && docker save -o docker-demo.tar docker-demo",
-    "load": "sh clean.sh && docker load -i ./docker-demo.tar && docker run -dp 9002:8080 --name docker-demo docker-demo"
+    "start": "sh clean.sh docker-demo && docker build -t docker-demo . && docker run -dp 9002:8080 --name docker-demo docker-demo",
+    "save": "sh clean.sh docker-demo && docker build -t docker-demo . && docker save -o docker-demo.tar docker-demo",
+    "load": "sh clean.sh docker-demo && docker load -i ./docker-demo.tar && docker run -dp 9002:8080 --name docker-demo docker-demo"
   },
   "license": "ISC"
 }
